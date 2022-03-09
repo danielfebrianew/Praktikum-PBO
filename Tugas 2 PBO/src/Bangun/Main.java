@@ -1,11 +1,13 @@
-package tugas2;
+package Bangun;
 
+import Bangun.Balok;
+import Bangun.Tabung;
 import java.util.Scanner;
 
 public class Main {
+    static Scanner userInput = new Scanner(System.in);
+    
     public static void main(String[] args) {
-        Scanner userInput = new Scanner(System.in);
-        
         boolean ulang;
         
         do {
@@ -16,7 +18,7 @@ public class Main {
             System.out.println("2. Hitung Tabung");
             System.out.println("0. Exit");
             System.out.print("Pilih :");
-            int inputPilihan = userInput.nextInt();
+            double inputPilihan = userInput.nextInt();
             
             if (inputPilihan == 1) {
                hitungBalok();
@@ -30,7 +32,7 @@ public class Main {
             }
             
             System.out.println("Ulangi? (Ya : 1 || Tidak : 0)");
-            int inputUlangi = userInput.nextInt();
+            double inputUlangi = userInput.nextInt();
             
             if(inputUlangi == 1) {
                 ulang = true;
@@ -42,34 +44,24 @@ public class Main {
     }
     
     static void hitungBalok() {
-        Scanner userInput = new Scanner(System.in);
-        
         System.out.print("\nInput Panjang : ");
-        int inputPanjangB = userInput.nextInt();
+        double inputPanjangB = userInput.nextInt();
         System.out.print("Input Lebar : ");
-        int inputLebarB = userInput.nextInt();
+        double inputLebarB = userInput.nextInt();
         System.out.print("Input Tinggi : ");
-        int inputTinggiB = userInput.nextInt();
+        double inputTinggiB = userInput.nextInt();
         System.out.println("\n");
-
-//        System.out.println("Luas Persegi Panjang =" + luasPP " m");
-//        System.out.println("Keliling Persegi Panjang =" + kelilingPP " m");
-//        System.out.println("Volume Balok =" + volumeB " m");
-//        System.out.println("Luas Permukaan Balok =" + luasPermukaanB " m"); 
+        Balok balok = new Balok(inputPanjangB, inputLebarB, inputTinggiB);
+        balok.display();
     }
     
     static void hitungTabung() {
-        Scanner userInput = new Scanner(System.in);
-        
-        System.out.println("\nInput Tinggi : ");
-        int inputTinggiT = userInput.nextInt();
+        System.out.print("\nInput Tinggi : ");
+        double inputTinggiT = userInput.nextInt();
         System.out.print("Input Jari-jari : ");
-        int inputJariJariT = userInput.nextInt();
+        double inputJariJariT = userInput.nextInt();
         System.out.println("\n");
-
-//        System.out.println("Luas Lingkaran =" + luasL " m");
-//        System.out.println("Keliling Lingkaran =" + kelilingL  " m");
-//        System.out.println("Volume Tabung =" + volumeT " m");
-//        System.out.println("Luas Permukaan Tabung =" + luasPermukaanT " m");
+        Tabung tabung = new Tabung(inputJariJariT, inputTinggiT);
+        tabung.display();
     }
 }

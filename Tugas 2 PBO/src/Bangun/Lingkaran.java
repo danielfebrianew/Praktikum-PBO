@@ -1,7 +1,7 @@
 package Bangun;
 
 public class Lingkaran implements MenghitungBidang {
-    protected double jariJari, luas, keliling;
+    private double jariJari, luas, keliling;
     
     public Lingkaran() {
         
@@ -40,12 +40,12 @@ public class Lingkaran implements MenghitungBidang {
     }
 
     @Override
-    public void Luas() {
-        luas = 3.14 * jariJari * jariJari;
+    public double Luas() {
+        return 3.14 * jariJari * jariJari;
     }
 
     @Override
-    public void Keliling() {
-        keliling = 3.14 * (jariJari + jariJari);
+    public double Keliling() {
+        return 3.14 * (jariJari + jariJari);
     }
 }

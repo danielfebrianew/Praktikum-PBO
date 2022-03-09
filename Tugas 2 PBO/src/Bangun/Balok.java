@@ -28,14 +28,22 @@ public class Balok extends PersegiPanjang implements MenghitungRuang {
         return luasPermukaan;
     }
 
+    public void setVolume(double volume) {
+        this.volume = volume;
+    }
+
+    public void setLuasPermukaan(double luasPermukaan) {
+        this.luasPermukaan = luasPermukaan;
+    }
+    
     @Override
-    public void volume() {
-        this.volume = this.panjang * this.lebar * this.tinggi;
+    public double volume() {
+        return this.panjang * this.lebar * this.tinggi;
     }
 
     @Override
-    public void luasPermukaan() {
-        this.luasPermukaan = 2 * (this.panjang * this.lebar) + (this.panjang * this.tinggi) + (this.tinggi + this.lebar);
+    public double luasPermukaan() {
+        return 2 * (this.panjang * this.lebar) + (this.panjang * this.tinggi) + (this.tinggi + this.lebar);
     }
     
     public void setAll(double panjang, double lebar, double tinggi){
@@ -47,5 +55,12 @@ public class Balok extends PersegiPanjang implements MenghitungRuang {
         this.Luas();
         this.luasPermukaan();
         this.volume();
+    }
+
+    public void display() {
+        System.out.println("Keliling Persegi Panjang = " + Keliling());
+        System.out.println("Luas Persegi Panjang = " + Luas());
+        System.out.println("Volume Balok = " + volume());
+        System.out.println("Luas Permukaan Balok = " + luasPermukaan());
     }
 }

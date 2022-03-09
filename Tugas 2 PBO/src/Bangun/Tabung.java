@@ -1,7 +1,7 @@
 package Bangun;
 
 public class Tabung extends Lingkaran implements MenghitungRuang  {
-    protected double tinggi, luaspermukaan, volume;
+    private double tinggi, luaspermukaan, volume;
     
     public Tabung() {
         
@@ -19,23 +19,15 @@ public class Tabung extends Lingkaran implements MenghitungRuang  {
     public void setTinggi(double tinggi) {
         this.tinggi = tinggi;
     }
-
-    public double getLuaspermukaan() {
-        return luaspermukaan;
-    }
-
-    public double getVolume() {
-        return volume;
-    }
     
     @Override
-    public void volume() {
-        this.volume = 3.14 * this.jariJari * this.jariJari;
+    public double volume() {
+        return 3.14 * super.getJariJari() * super.getJariJari();
     }
 
     @Override
-    public void luasPermukaan() {
-        this.luaspermukaan = this.keliling * this.tinggi + 2 * (this.getLuas()); 
+    public double luasPermukaan() {
+        return Keliling() * tinggi + 2 * Luas(); 
     }
     
     public void setAll(double jariJari, double tinggi){
@@ -48,4 +40,10 @@ public class Tabung extends Lingkaran implements MenghitungRuang  {
         this.volume();
     }
     
+    public void display(){
+        System.out.println("Luas Lingkaran = " + Luas());
+        System.out.println("Keliling Lingkaran = " + Keliling());
+        System.out.println("Volume = " + volume());
+        System.out.println("Luas Permukaan Tabung = " + luasPermukaan());
+    }
 }

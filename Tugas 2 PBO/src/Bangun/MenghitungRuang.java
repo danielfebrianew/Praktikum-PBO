@@ -1,6 +1,6 @@
 package Bangun;
 
 public interface MenghitungRuang {
-    public void volume();
-    public void luasPermukaan();
+    public double volume();
+    public double luasPermukaan();
 }

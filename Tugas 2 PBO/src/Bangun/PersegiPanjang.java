@@ -45,12 +45,16 @@ public class PersegiPanjang implements MenghitungBidang{
     }
 
     @Override
-    public void Luas() {
-        luas = panjang * lebar;
+    public double Luas() {
+        return panjang * lebar;
     }
 
     @Override
-    public void Keliling() {
-        keliling = 2 * (panjang + lebar);
+    public double Keliling() {
+        return 2 * (panjang + lebar);
+    }
+    
+    public void display() {
+        System.out.println("");
     }
 }
