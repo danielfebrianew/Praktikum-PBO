@@ -129,7 +129,7 @@ public class Main {
                 System.out.println("Nilai Kemampuan Problem Solving : ");
                 double nilaiMhs3 = input.nextDouble();
 
-                Mahasiswa mahsiswa = new Mahasiswa(namaLengkap,usia,nilaiMhs1,nilaiMhs2,nilaiMhs3);
+                Mahasiswa mahasiswa = new Mahasiswa(namaLengkap,usia,nilaiMhs1,nilaiMhs2,nilaiMhs3);
                 
                 System.out.println("\n");
                 System.out.println("+------+");
@@ -144,7 +144,7 @@ public class Main {
 
                 do {
                     if(pilih == 1) {
-                        mahsiswa.display();
+                        mahasiswa.display();
 
                         loop = false;
                     } else if (pilih == 2) {
@@ -163,7 +163,7 @@ public class Main {
                         System.out.println("Nilai Kemampuan Design Thinking : ");
                         double tempNilai3 = input.nextDouble();
 
-                        mahsiswa.setNilaiMhs(tempNilai1,tempNilai2,tempNilai3);
+                        mahasiswa.setNilaiMhs(tempNilai1,tempNilai2,tempNilai3);
 
                         loop = false;
                     } else if (pilih == 3) {

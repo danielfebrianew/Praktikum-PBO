@@ -1,5 +1,5 @@
 package beasiswa;
 
-public class BeasiswaPelajar {
-    
+public interface BeasiswaPelajar {
+    double hitungNilaiAkhir();
 }
