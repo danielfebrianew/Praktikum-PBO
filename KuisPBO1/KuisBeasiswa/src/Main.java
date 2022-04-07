@@ -50,7 +50,7 @@ public class Main {
                 System.out.println("Nilai Kemampuan Design Thinking : ");
                 double nilaiPelajar3 = input.nextDouble();
 
-                Pelajar pelajar1 = new Pelajar(namaLengkap,usia,nilaiPelajar1,nilaiPelajar2,nilaiPelajar3);
+                Pelajar pelajar = new Pelajar(namaLengkap,usia,nilaiPelajar1,nilaiPelajar2,nilaiPelajar3);
                 
                 System.out.println("\n");
                 System.out.println("+------+");
@@ -65,7 +65,7 @@ public class Main {
 
                 do {
                     if(pilih == 1) {
-                        pelajar1.display();
+                        pelajar.display();
 
                         loop = false;
                     } else if (pilih == 2) {
@@ -78,11 +78,13 @@ public class Main {
                         System.out.println("Keterangan: Nilai yang valid berada diantara 0 - 100");
                         System.out.println("\n");
                         System.out.println("Nilai Struktur dan Konten Esai : ");
-                        // double nilaiMhs1 = input.nextDouble();
+                        double tempPelajar1 = input.nextDouble();
                         System.out.println("Nilai Teknik Visualisasi : ");
-                        // double nilaiMhs2 = input.nextDouble();
+                        double tempPelajar2 = input.nextDouble();
                         System.out.println("Nilai Kemampuan Design Thinking : ");
-                        // double nilaiMhs3 = input.nextDouble();
+                        double tempPelajar3 = input.nextDouble();
+
+                        pelajar.setNilaiPelajar(tempPelajar1,tempPelajar2,tempPelajar3);
 
                         loop = false;
                     } else if (pilih == 3) {
@@ -127,7 +129,7 @@ public class Main {
                 System.out.println("Nilai Kemampuan Problem Solving : ");
                 double nilaiMhs3 = input.nextDouble();
 
-                Mahasiswa mahasiswa1 = new Mahasiswa(namaLengkap,usia,nilaiMhs1,nilaiMhs2,nilaiMhs3);
+                Mahasiswa mahsiswa = new Mahasiswa(namaLengkap,usia,nilaiMhs1,nilaiMhs2,nilaiMhs3);
                 
                 System.out.println("\n");
                 System.out.println("+------+");
@@ -142,7 +144,7 @@ public class Main {
 
                 do {
                     if(pilih == 1) {
-                        mahasiswa1.display();
+                        mahsiswa.display();
 
                         loop = false;
                     } else if (pilih == 2) {
@@ -155,11 +157,13 @@ public class Main {
                         System.out.println("Keterangan: Nilai yang valid berada diantara 0 - 100");
                         System.out.println("\n");
                         System.out.println("Nilai Struktur dan Konten Esai : ");
-                        // double  = input.nextDouble();
+                        double tempNilai1 = input.nextDouble();
                         System.out.println("Nilai Teknik Visualisasi : ");
-                        // double nilaiTeknik = input.nextDouble();
+                        double tempNilai2 = input.nextDouble();
                         System.out.println("Nilai Kemampuan Design Thinking : ");
-                        // double nilaiKemampuan = input.nextDouble();
+                        double tempNilai3 = input.nextDouble();
+
+                        mahsiswa.setNilaiMhs(tempNilai1,tempNilai2,tempNilai3);
 
                         loop = false;
                     } else if (pilih == 3) {

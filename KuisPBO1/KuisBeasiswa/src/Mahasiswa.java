@@ -15,6 +15,12 @@ public class Mahasiswa implements BeasiswaMahasiswa{
         this.nilai3 = nilai3;
     }
 
+    // setter
+
+    public void setNilaiMhs(double nilai1) {
+        this.nilai1 = nilai1;
+    }
+
     @Override
     public double hitungNilaiAkhir(){
         return ((nilai1 * 0.6) + (nilai2 * 0.25) + (nilai3 * 0.15));
@@ -31,10 +37,10 @@ public class Mahasiswa implements BeasiswaMahasiswa{
 
         if(hitungNilaiAkhir() < 87.5) {
             System.out.println("\tKETERANGAN\t: TIDAK LOLOS");
-            System.out.println("\tMohon maaf, " + nama + " (" + usia + ") dinyatakan tidak diterima pada program BEASISWA PELAJAR karena belum mencapai nilai yang diharapkan pada tahap seleksi.");
+            System.out.println("\tMohon maaf, " + nama + " (" + usia + ") dinyatakan tidak diterima pada program BEASISWA MAHASISWA karena belum mencapai nilai yang diharapkan pada tahap seleksi.");
         } else {
             System.out.println("\tKETERANGAN\t: LOLOS");
-            System.out.println("\tSelamat! " + nama + " (" + usia + ") dinyatakan diterima pada program BEASISWA PELAJAR karena telah mencapai nilai yang diharapkan pada tahap seleksi.");
+            System.out.println("\tSelamat! " + nama + " (" + usia + ") dinyatakan diterima pada program BEASISWA MAHASISWA karena telah mencapai nilai yang diharapkan pada tahap seleksi.");
         }
     }
 }
