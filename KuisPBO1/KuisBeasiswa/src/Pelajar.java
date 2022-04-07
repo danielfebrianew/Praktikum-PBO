@@ -3,11 +3,11 @@ import beasiswa.BeasiswaPelajar;
 public class Pelajar implements BeasiswaPelajar {
     // data
     private String nama;
-    private double usia;
+    private int usia;
     private double nilai1, nilai2, nilai3;
 
     // constructor
-    public Pelajar(String nama, double usia, double nilai1, double nilai2, double nilai3) {
+    public Pelajar(String nama, int usia, double nilai1, double nilai2, double nilai3) {
         this.nama = nama;
         this.usia = usia;
         this.nilai1 = nilai1;
@@ -15,12 +15,34 @@ public class Pelajar implements BeasiswaPelajar {
         this.nilai3 = nilai3;
     }
 
-    // setter
-
+    // setter edit nilai
     public void setNilaiPelajar(double nilai1, double nilai2, double nilai3) {
         this.nilai1 = nilai1;
+        this.nilai2 = nilai2;
+        this.nilai3 = nilai3;
+    }
+
+    // setter input nilai
+    public void setNilai1(double nilai1) {
         this.nilai1 = nilai1;
-        this.nilai1 = nilai1;
+    }
+
+    public void setNilai2(double nilai2) {
+        this.nilai2 = nilai2;
+    }
+
+    public void setNilai3(double nilai3) {
+        this.nilai3 = nilai3;
+    }
+
+    public void errorHandling() {
+        try {
+
+        } catch (Exception error) {
+            System.out.println("Terjadi Error! " + error.getMessage());
+        } finally {
+            display();
+        }
     }
 
     @Override

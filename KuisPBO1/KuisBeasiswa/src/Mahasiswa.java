@@ -7,7 +7,7 @@ public class Mahasiswa implements BeasiswaMahasiswa{
     private double nilai1, nilai2, nilai3;
 
     // constructor
-    public Mahasiswa(String nama, double usia, double nilai1, double nilai2, double nilai3) {
+    public Mahasiswa(String nama, int usia, double nilai1, double nilai2, double nilai3) {
         this.nama = nama;
         this.usia = usia;
         this.nilai1 = nilai1;
@@ -19,13 +19,23 @@ public class Mahasiswa implements BeasiswaMahasiswa{
 
     public void setNilaiMhs(double nilai1, double nilai2, double nilai3) {
         this.nilai1 = nilai1;
-        this.nilai1 = nilai1;
-        this.nilai1 = nilai1;
+        this.nilai2 = nilai2;
+        this.nilai3 = nilai3;
     }
 
     @Override
     public double hitungNilaiAkhir(){
         return ((nilai1 * 0.6) + (nilai2 * 0.25) + (nilai3 * 0.15));
+    }
+
+    public void errorHandling() {
+        try {
+
+        } catch (Exception error) {
+            System.out.println("Terjadi Error! " + error.getMessage());
+        } finally {
+            display();
+        }
     }
 
     public void display() {
