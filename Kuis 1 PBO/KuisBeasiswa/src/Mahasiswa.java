@@ -28,16 +28,6 @@ public class Mahasiswa implements BeasiswaMahasiswa{
         return ((nilai1 * 0.6) + (nilai2 * 0.25) + (nilai3 * 0.15));
     }
 
-    public void errorHandling() {
-        try {
-
-        } catch (Exception error) {
-            System.out.println("Terjadi Error! " + error.getMessage());
-        } finally {
-            display();
-        }
-    }
-
     public void display() {
         System.out.println("\n");
         System.out.println("+-------+");

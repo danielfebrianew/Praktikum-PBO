@@ -22,29 +22,6 @@ public class Pelajar implements BeasiswaPelajar {
         this.nilai3 = nilai3;
     }
 
-    // setter input nilai
-    public void setNilai1(double nilai1) {
-        this.nilai1 = nilai1;
-    }
-
-    public void setNilai2(double nilai2) {
-        this.nilai2 = nilai2;
-    }
-
-    public void setNilai3(double nilai3) {
-        this.nilai3 = nilai3;
-    }
-
-    public void errorHandling() {
-        try {
-
-        } catch (Exception error) {
-            System.out.println("Terjadi Error! " + error.getMessage());
-        } finally {
-            display();
-        }
-    }
-
     @Override
     public double hitungNilaiAkhir(){
         return ((nilai1 * 0.5) + (nilai2 * 0.2) + (nilai3 * 0.3));
