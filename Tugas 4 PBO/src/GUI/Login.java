@@ -5,9 +5,7 @@ import Connection.Connector;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
-
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
+import java.sql.*;
 
 public class Login extends JFrame {
     // Deklarasi Panel & Frame
@@ -85,7 +83,7 @@ public class Login extends JFrame {
                         data[jumlah][1] = resultSet.getString("username"); // ngambil string
                         data[jumlah][2] = resultSet.getString("password");
                         if((data[jumlah][1].equals(username)) && (data[jumlah][2].equals(password))) {
-                            berhasilLogin = true;   
+                            berhasilLogin = true;
                             break;
                         }
                         jumlah++;
@@ -94,7 +92,7 @@ public class Login extends JFrame {
                         JOptionPane.showMessageDialog(frame, "Login Berhasil!");
                     } else {
                         // JOptionPane.showMessageDialog(frame, "Login Gagal!");
-                        JOptionPane.showMessageDialog(frame, "Kesalahan Username/Password!");
+                        JOptionPane.showMessageDialog(frame, "Kesalahan Username/Password!", "Alert", HEIGHT);
                     }
                 } catch (Exception exception) {
                     System.out.println(exception.getMessage());
